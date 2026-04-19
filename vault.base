@@ -1,0 +1,61 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("vault")
+formulas:
+  days_since_learned: if(learned_on, (today() - date(learned_on)).days, "")
+  needs_review: if(review_on, date(review_on) <= today(), false)
+properties:
+  topic:
+    displayName: トピック
+  source_type:
+    displayName: 情報源タイプ
+  source:
+    displayName: 情報源
+  learned_on:
+    displayName: 学んだ日
+  review_on:
+    displayName: 復習日
+  status:
+    displayName: 状態
+  summary:
+    displayName: 要点
+  next_action:
+    displayName: 次にやること
+  formula.days_since_learned:
+    displayName: 経過日数
+  formula.needs_review:
+    displayName: 要復習
+views:
+  - type: table
+    name: 最近の学び
+    order:
+      - file.name
+      - source_type
+      - learned_on
+      - review_on
+      - formula.days_since_learned
+      - next_action
+      - status
+      - topic
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: 復習キュー
+    filters:
+      and:
+        - formula.needs_review == true
+    order:
+      - file.name
+      - topic
+      - review_on
+      - status
+      - next_action
+  - type: cards
+    name: 一覧
+    order:
+      - file.name
+      - topic
+      - summary
+      - source

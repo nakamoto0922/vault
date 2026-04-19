@@ -1,0 +1,7 @@
+{
+  // "workbench.editorAssociations": {
+  //   "*.md": "vscode.markdown.preview.editor"
+  // },
+  "editor.wordWrap": "on",
+  "markdown.preview.fontSize": 16
+}
