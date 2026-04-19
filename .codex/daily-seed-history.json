@@ -17,6 +17,24 @@
       "category": "TypeScript",
       "question": "TypeScriptで『型は実行時には存在しない』とはどういう意味で、JavaScriptの挙動とどう関係するのか？",
       "question_type": "mental-model"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "AWS",
+      "question": "AWSは何を売っているサービスで、なぜ「クラウド」と呼ばれるのか？",
+      "question_type": "definition"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "Linux",
+      "question": "Linuxを学ぶとは黒い画面のコマンドを暗記することなのか？",
+      "question_type": "misconception"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "Databases",
+      "question": "データベースはどんな場面で、ただのファイル保存より役に立つのか？",
+      "question_type": "use-case"
     }
   ]
 }
