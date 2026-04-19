@@ -1,34 +1,37 @@
 # Daily Seed Automation Prompt
 
-Use the `daily-seed` skill in this repository.
+このリポジトリの `daily-seed` skill を使ってください。
 
-Today in Asia/Tokyo, generate 3 daily seed notes for this vault.
+Asia/Tokyo の今日の日付を基準に、この vault 用の daily seed ノートを 3 件生成してください。
 
-Requirements:
+要件:
 
-- Read `seed-categories.md`.
-- Use only categories checked in `Enabled Categories`.
-- Read `.codex/daily-seed-history.json`.
-- Generate 3 beginner-friendly questions from the enabled categories.
-- The questions should help concept understanding, not summarize news.
-- Avoid duplicates and near-duplicates of questions already recorded in `.codex/daily-seed-history.json`.
-- Prefer a mix of question angles when possible:
+- `seed-categories.md` を読む。
+- `Enabled Categories` でチェックされているカテゴリだけを使う。
+- `.codex/daily-seed-history.json` を読む。
+- 有効カテゴリから、初学者向けの質問を 3 つ生成する。
+- 質問はニュース要約ではなく、概念理解の入口になるものにする。
+- `.codex/daily-seed-history.json` に記録済みの質問と重複・類似しないようにする。
+- 可能なら質問の切り口を分散させる。
   - definition
   - comparison
   - use-case
   - misconception
   - mental-model
-- Generate 3 Markdown files under `seeds/` named:
+- `seeds/` 配下に次の 3 ファイルを生成する。
   - `seed-YYYYMMDD-01.md`
   - `seed-YYYYMMDD-02.md`
   - `seed-YYYYMMDD-03.md`
-- Write all note content in Japanese.
-- Each note should be readable in about 3 minutes and help a beginner build an initial mental model.
-- After generating the notes, append the 3 chosen questions to `.codex/daily-seed-history.json`.
-- Create or reuse branch `seed-YYYYMMDD`.
-- Commit only:
-  - the 3 generated notes
+- ノート本文はすべて日本語で書く。
+- 各ノートは 3 分前後で読めて、初学者が最初のメンタルモデルを作れる内容にする。
+- 生成後、選んだ 3 問を `.codex/daily-seed-history.json` に追記する。
+- ブランチ `seed-YYYYMMDD` を作成または再利用する。
+- コミット対象は次の 4 ファイルだけに限定する。
+  - 3 件の生成ノート
   - `.codex/daily-seed-history.json`
-- Open or update a PR titled `Seed YYYY-MM-DD`.
+- PR タイトルは `Seed YYYY-MM-DD` にする。
+- 同日の PR がすでにある場合は新規作成せず、同じブランチと PR を更新する。
+- 関係ないファイルは変更しない。
+- 必要ファイルの更新に失敗した場合は、別パスや別ファイルで代替せず、失敗内容をそのまま報告する。
 
-If notes for today already exist, update the same branch and PR instead of creating duplicates.
+今日のノートがすでに存在する場合は、重複作成せず同じファイル・同じブランチ・同じ PR を更新してください。
