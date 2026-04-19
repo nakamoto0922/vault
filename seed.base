@@ -1,0 +1,37 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("seeds")
+    - /^seed-\d{8}$/.matches(file.basename)
+formulas:
+  days_old: if(seed_date, (today() - date(seed_date)).days, "")
+properties:
+  seed_date:
+    displayName: Seed日付
+  item_count:
+    displayName: 件数
+  categories:
+    displayName: カテゴリ
+  branch:
+    displayName: ブランチ
+  generated_at:
+    displayName: 生成時刻
+  formula.days_old:
+    displayName: 経過日数
+views:
+  - type: table
+    name: 最近のSeed
+    order:
+      - file.name
+      - seed_date
+      - item_count
+      - categories
+      - formula.days_old
+      - branch
+  - type: cards
+    name: カード
+    order:
+      - file.name
+      - categories
+      - item_count
+      - branch

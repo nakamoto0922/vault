@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/学習メモテンプレート.md",
+                "file": "seed-categories.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "学習メモテンプレート"
+              "title": "seed-categories"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "3c32ee8c05e49692",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vault/学習メモテンプレート.md",
+                "file": "seed-categories.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "学習メモテンプレートへのバックリンク"
+              "title": "seed-categoriesへのバックリンク"
             }
           },
           {
@@ -167,7 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,31 +183,41 @@
   "active": "29a41ad011e35f10",
   "lastOpenFiles": [
     "vault.base",
+    "seed.base",
+    "seed-categories.md",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/trim.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/number.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/join.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/EntitiesParser.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/currency.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/booleanParserExt.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/booleanParser.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/OutputBuilders/ParserOptionsBuilder.js",
+    "automation/seed/node_modules/fast-xml-parser/src/v5/OutputBuilders/JsObjBuilder.js",
+    "automation/seed/node_modules/strnum/README.md",
+    "automation/seed/node_modules/strnum/CHANGELOG.md",
+    "automation/seed/node_modules/fast-xml-parser/README.md",
+    "automation/seed/node_modules/fast-xml-parser/CHANGELOG.md",
+    "automation/seed/README.md",
+    "SEEDS.md",
+    "daily-seed-automation.md",
+    "vault/学習メモテンプレート.md",
+    "seeds/seed-20260419.md",
+    "node_modules/fast-xml-parser/README.md",
+    "seeds/README.md",
     "templates/template.md",
     "vault/無題のファイル.md",
     "memo.md",
     "templates/学習メモテンプレート.md",
-    "templates",
-    "vault/学習メモテンプレート.md",
     "vault/Obsidian Bases で学びを整理する.md",
-    "vault",
-    "workspace",
     "Notes/学習メモテンプレート.md",
     "Notes/Obsidian Bases で学びを整理する.md",
     "README.md",
     "Templates/学習メモテンプレート.md",
     "Templates/学習メモテンプレート 1.md",
     "Notes/無題のファイル.md",
-    "Templates",
-    "Notes",
-    "Learning/学びの保管庫.base",
     "Learning/学びの入口.md",
     "Learning/Templates/学習メモテンプレート.md",
-    "Learning/Templates",
-    "Learning/Notes/Obsidian Bases で学びを整理する.md",
-    "Learning/Notes",
-    "Vault/Obsidian Bases で学びを整理する.md",
-    "Vault",
     "無題のファイル.canvas"
   ]
 }
