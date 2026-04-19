@@ -9,7 +9,7 @@ Use this skill when you need to produce the daily learning-seed notes for this v
 
 ## Goal
 
-Create 3 separate files under `seeds/` from dynamically generated questions, then prepare or update a PR on branch `seed-YYYYMMDD`.
+Create 3 separate seed notes under `seeds/`, update question history, and open or update a PR on branch `seed-YYYYMMDD`.
 
 ## Inputs
 
@@ -39,11 +39,19 @@ The purpose is not to surface recent news. The purpose is to create a useful ent
 
 ## Output Rules
 
-Create these 3 files:
+Create 3 files under `seeds/`.
 
-- `seeds/seed-YYYYMMDD-01.md`
-- `seeds/seed-YYYYMMDD-02.md`
-- `seeds/seed-YYYYMMDD-03.md`
+Filename format:
+
+- `内容を表す短い日本語_YYYY-MM-DD.md`
+
+Rules:
+
+- Use Japanese filenames.
+- Put the date at the end.
+- Prefer filenames that communicate what the note helps the reader understand.
+- Avoid Windows-invalid characters such as `?` `:` `*` `/` `\` `<` `>` `|`.
+- Shorten long questions into concise but meaningful filenames.
 
 Each file must be written in Japanese and include frontmatter like:
 
@@ -97,10 +105,40 @@ After generating the notes, append entries like this to `.codex/daily-seed-histo
 
 ## Git Rules
 
-1. Create or reuse branch `seed-YYYYMMDD`.
-2. Commit only:
-   - `seeds/seed-YYYYMMDD-01.md`
-   - `seeds/seed-YYYYMMDD-02.md`
-   - `seeds/seed-YYYYMMDD-03.md`
+Before creating or updating the seed branch:
+
+1. Switch to `main`.
+2. Pull latest `main` with a fast-forward only strategy.
+3. Then create or reuse branch `seed-YYYYMMDD`.
+
+For the main seed PR:
+
+1. Commit only:
+   - the 3 generated seed notes
    - `.codex/daily-seed-history.json`
-3. Open or update a PR titled `Seed YYYY-MM-DD`.
+2. Open or update a PR titled `Seed YYYY-MM-DD`.
+
+## Reflection Rules
+
+After finishing the main seed PR, reflect on the run.
+
+### Prompt Improvement PR
+
+If `daily-seed-automation.md` should be improved immediately:
+
+1. Switch to latest `main`.
+2. Create branch `improve-daily-seed-automation-YYYYMMDD`.
+3. Update only `daily-seed-automation.md`.
+4. Commit only that file.
+5. Open a PR titled `Improve daily seed automation YYYY-MM-DD`.
+
+### Improvement Note PR
+
+If there are other worthwhile improvements that should be recorded but not applied immediately:
+
+1. Switch to latest `main`.
+2. Create branch `propose-daily-seed-improvements-YYYYMMDD`.
+3. Create `improvements/daily-seed-YYYYMMDD.md`.
+4. Write concrete observations, problems, and proposals.
+5. Commit only that file.
+6. Open a PR titled `Propose daily seed improvements YYYY-MM-DD`.

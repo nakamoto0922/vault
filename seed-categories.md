@@ -16,22 +16,22 @@ daily seed では、このファイルで有効にしたカテゴリをもとに
 - [ ] Security
 - [ ] Networking
 - [x] GCP
-- [ ] AWS
+- [x] AWS
 - [ ] Azure
-- [ ] Linux
+- [x] Linux
 - [ ] Git
 - [x] TypeScript
-- [ ] JavaScript
-- [ ] React
-- [ ] Node.js
-- [ ] Web Development
+- [x] JavaScript
+- [x] React
+- [x] Node.js
+- [x] Web Development
 - [ ] CSS
-- [ ] Accessibility
-- [ ] Testing
-- [ ] DevOps
+- [x] Accessibility
+- [x] Testing
+- [x] DevOps
 - [ ] Docker
 - [ ] Kubernetes
-- [ ] Databases
+- [x] Databases
 - [ ] PostgreSQL
 - [ ] SQL
 - [ ] Data Engineering
@@ -42,7 +42,7 @@ daily seed では、このファイルで有効にしたカテゴリをもとに
 - [ ] Swift
 - [ ] iOS
 - [ ] Android
-- [ ] Product Management
+- [x] Product Management
 - [ ] Design
 - [ ] HCI
 - [ ] Startups

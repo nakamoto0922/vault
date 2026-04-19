@@ -1,37 +1,94 @@
 # Daily Seed Automation Prompt
 
-このリポジトリの `daily-seed` skill を使ってください。
+この repository では `daily-seed` skill を使ってください。
 
-Asia/Tokyo の今日の日付を基準に、この vault 用の daily seed ノートを 3 件生成してください。
+Asia/Tokyo の当日分として、この vault 用の daily seed ノートを 3 件生成してください。
 
-要件:
+## メインタスク
 
-- `seed-categories.md` を読む。
-- `Enabled Categories` でチェックされているカテゴリだけを使う。
-- `.codex/daily-seed-history.json` を読む。
-- 有効カテゴリから、初学者向けの質問を 3 つ生成する。
-- 質問はニュース要約ではなく、概念理解の入口になるものにする。
-- `.codex/daily-seed-history.json` に記録済みの質問と重複・類似しないようにする。
-- 可能なら質問の切り口を分散させる。
-  - definition
-  - comparison
-  - use-case
-  - misconception
-  - mental-model
-- `seeds/` 配下に次の 3 ファイルを生成する。
-  - `seed-YYYYMMDD-01.md`
-  - `seed-YYYYMMDD-02.md`
-  - `seed-YYYYMMDD-03.md`
-- ノート本文はすべて日本語で書く。
-- 各ノートは 3 分前後で読めて、初学者が最初のメンタルモデルを作れる内容にする。
-- 生成後、選んだ 3 問を `.codex/daily-seed-history.json` に追記する。
-- ブランチ `seed-YYYYMMDD` を作成または再利用する。
-- コミット対象は次の 4 ファイルだけに限定する。
-  - 3 件の生成ノート
-  - `.codex/daily-seed-history.json`
-- PR タイトルは `Seed YYYY-MM-DD` にする。
-- 同日の PR がすでにある場合は新規作成せず、同じブランチと PR を更新する。
-- 関係ないファイルは変更しない。
-- 必要ファイルの更新に失敗した場合は、別パスや別ファイルで代替せず、失敗内容をそのまま報告する。
+1. `seed-categories.md` を読む。
+2. `Enabled Categories` でチェックされているカテゴリだけを使う。
+3. `.codex/daily-seed-history.json` を読む。
+4. 有効カテゴリをもとに、初学者向けの質問を 3 つ生成する。
+5. `.codex/daily-seed-history.json` に記録済みの質問と重複、または実質的に同じ質問は避ける。
+6. 可能なら質問の切り口が偏らないようにする。
+   - 定義
+   - 比較
+   - 使いどころ
+   - 誤解整理
+   - メンタルモデル
+7. ノート本文はすべて日本語で書く。
+8. 各ノートは 3 分程度で読めて、初学者が最初の理解の足場を作れる内容にする。
 
-今日のノートがすでに存在する場合は、重複作成せず同じファイル・同じブランチ・同じ PR を更新してください。
+## ファイル名
+
+生成する 3 つの Markdown ファイルは `seeds/` 配下に置き、内容がひと目で分かる日本語ファイル名にしてください。
+
+形式:
+
+- `内容を表す短い日本語_YYYY-MM-DD.md`
+
+ルール:
+
+- 内容がひと目で分かることを優先する。
+- トピック名だけでなく、できれば「何を理解できるノートか」が伝わる名前にする。
+- 日付は末尾に置く。
+- Windows で使えない文字は避ける。
+  - `?` `:` `*` `/` `\\` `<` `>` `|` は使わない
+- 長すぎる場合は意味を保ったまま短くする。
+
+例:
+
+- `GCPの基本をつかむ_2026-04-19.md`
+- `Cloud RunとCompute Engineの違い_2026-04-19.md`
+- `TypeScriptのunknownとanyの違い_2026-04-19.md`
+
+## Git フロー
+
+seed 用ブランチを作る、または更新する前に、必ず次を行うこと:
+
+1. `main` に切り替える。
+2. `main` を fast-forward only で最新まで pull する。
+3. そのあとで `seed-YYYYMMDD` ブランチを作る、または再利用する。
+
+その後の流れ:
+
+1. 3 件のノートを生成する。
+2. 採用した 3 つの質問を `.codex/daily-seed-history.json` に追記する。
+3. commit 対象は次だけにする。
+   - 生成した 3 件のノート
+   - `.codex/daily-seed-history.json`
+4. `Seed YYYY-MM-DD` というタイトルで PR を作る、または更新する。
+
+当日分のノートや PR がすでに存在する場合は、新しく増やさず同じブランチと PR を更新してください。
+
+## 実行後の振り返り
+
+メインタスク完了後に、今回の実行を振り返ってください。
+
+### A. Automation Prompt 自体の改善
+
+`daily-seed-automation.md` にすぐ反映すべき具体的な改善がある場合:
+
+1. 最新の `main` を基準に別ブランチを作る。
+   - `improve-daily-seed-automation-YYYYMMDD`
+2. `daily-seed-automation.md` だけを更新する。
+3. そのファイルだけを commit する。
+4. 次のタイトルで別 PR を作る。
+   - `Improve daily seed automation YYYY-MM-DD`
+
+改善が具体的で、今すぐ直す価値がある場合だけ実行してください。
+
+### B. その他の改善案
+
+すぐに適用しないが、残しておく価値のある改善案がある場合:
+
+1. `improvements/daily-seed-YYYYMMDD.md` を作る。
+2. 観察したこと、問題点、改善案を具体的に書く。
+3. 最新の `main` を基準に別ブランチを作る。
+   - `propose-daily-seed-improvements-YYYYMMDD`
+4. 改善メモだけを commit する。
+5. 次のタイトルで別 PR を作る。
+   - `Propose daily seed improvements YYYY-MM-DD`
+
+意味のある提案が 1 件以上ある場合だけ、この PR を作ってください。

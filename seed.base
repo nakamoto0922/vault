@@ -2,7 +2,7 @@ filters:
   and:
     - 'file.ext == "md"'
     - 'file.inFolder("seeds")'
-    - '/^seed-\d{8}-\d{2}$/.matches(file.basename)'
+    - '/.+_\d{4}-\d{2}-\d{2}$/.matches(file.basename)'
 
 formulas:
   days_old: 'if(seed_date, (today() - date(seed_date)).days, "")'
