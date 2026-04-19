@@ -1,7 +1,3 @@
 {
-  "alwaysUpdateLinks": true,
-  "userIgnoreFilters": [
-    "automation/seed/node_modules/",
-    "automation/seed/data/"
-  ]
+  "alwaysUpdateLinks": true
 }
