@@ -182,6 +182,9 @@
   },
   "active": "29a41ad011e35f10",
   "lastOpenFiles": [
+    "seeds/seed-20260419-03.md",
+    "seeds/seed-20260419-02.md",
+    "seeds/seed-20260419-01.md",
     "vault.base",
     "seed.base",
     "seed-categories.md",
@@ -193,7 +196,6 @@
     "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/booleanParserExt.js",
     "automation/seed/node_modules/fast-xml-parser/src/v5/valueParsers/booleanParser.js",
     "automation/seed/node_modules/fast-xml-parser/src/v5/OutputBuilders/ParserOptionsBuilder.js",
-    "automation/seed/node_modules/fast-xml-parser/src/v5/OutputBuilders/JsObjBuilder.js",
     "automation/seed/node_modules/strnum/README.md",
     "automation/seed/node_modules/strnum/CHANGELOG.md",
     "automation/seed/node_modules/fast-xml-parser/README.md",
@@ -216,8 +218,6 @@
     "Templates/学習メモテンプレート.md",
     "Templates/学習メモテンプレート 1.md",
     "Notes/無題のファイル.md",
-    "Learning/学びの入口.md",
-    "Learning/Templates/学習メモテンプレート.md",
     "無題のファイル.canvas"
   ]
 }
