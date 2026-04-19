@@ -1,3 +1,22 @@
 {
-  "used_questions": []
+  "used_questions": [
+    {
+      "date": "2026-04-19",
+      "category": "AI",
+      "question": "AIモデルとAIプロダクトは何が違い、なぜこの2つを分けて考えると理解しやすくなるのか？",
+      "question_type": "misconception"
+    },
+    {
+      "date": "2026-04-19",
+      "category": "GCP",
+      "question": "Cloud Runはどんなときに最初の選択肢になり、Compute Engineとどう使い分けると考えればよいのか？",
+      "question_type": "comparison"
+    },
+    {
+      "date": "2026-04-19",
+      "category": "TypeScript",
+      "question": "TypeScriptで『型は実行時には存在しない』とはどういう意味で、JavaScriptの挙動とどう関係するのか？",
+      "question_type": "mental-model"
+    }
+  ]
 }
