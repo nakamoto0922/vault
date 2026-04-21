@@ -17,6 +17,24 @@
       "category": "TypeScript",
       "question": "TypeScriptで『型は実行時には存在しない』とはどういう意味で、JavaScriptの挙動とどう関係するのか？",
       "question_type": "mental-model"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "AWS",
+      "question": "AWSのIAMロールとアクセスキーは何が違い、どちらを使うべきかをどう判断すればよいのか？",
+      "question_type": "comparison"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "Testing",
+      "question": "テストダブルとは何で、なぜ本物の部品を使わずに置き換えることがあるのか？",
+      "question_type": "definition"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "Databases",
+      "question": "データベースのインデックスはなぜ検索を速くでき、どんな代償があるのか？",
+      "question_type": "mental-model"
     }
   ]
 }
