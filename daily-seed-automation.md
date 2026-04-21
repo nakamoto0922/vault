@@ -6,6 +6,8 @@ Asia/Tokyo の当日分として、この vault 用の daily seed ノートを 3
 
 ## メインタスク
 
+ファイルを読むときは UTF-8 を明示してください。特に PowerShell では `Get-Content <path> -Encoding UTF8` を使い、文字化けした表示をもとに判断しないでください。
+
 1. `seed-categories.md` を読む。
 2. `Enabled Categories` でチェックされているカテゴリだけを使う。
 3. `.codex/daily-seed-history.json` を読む。
