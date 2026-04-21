@@ -35,6 +35,24 @@
       "category": "Databases",
       "question": "データベースのインデックスはなぜ検索を速くでき、どんな代償があるのか？",
       "question_type": "mental-model"
+    },
+    {
+      "date": "2026-04-22",
+      "category": "Linux",
+      "question": "Linuxの「パス」と「環境変数」は何で、コマンドを実行するときにどう関係しますか？",
+      "question_type": "definition"
+    },
+    {
+      "date": "2026-04-22",
+      "category": "React",
+      "question": "Reactのstateはただの変数と何が違い、なぜ直接書き換えてはいけないのですか？",
+      "question_type": "misconception"
+    },
+    {
+      "date": "2026-04-22",
+      "category": "Product Management",
+      "question": "プロダクト指標はどんな場面で役に立ち、なぜ数値だけで判断してはいけないのですか？",
+      "question_type": "use-case"
     }
   ]
 }
