@@ -53,6 +53,24 @@
       "category": "Product Management",
       "question": "プロダクト指標はどんな場面で役に立ち、なぜ数値だけで判断してはいけないのですか？",
       "question_type": "use-case"
+    },
+    {
+      "date": "2026-04-23",
+      "category": "Accessibility",
+      "question": "アクセシビリティは障害のある人だけのためのものですか？",
+      "question_type": "misconception"
+    },
+    {
+      "date": "2026-04-23",
+      "category": "Node.js",
+      "question": "Node.jsはブラウザのJavaScriptと何が違い、何を作るために使うのですか？",
+      "question_type": "comparison"
+    },
+    {
+      "date": "2026-04-23",
+      "category": "DevOps",
+      "question": "CI/CDは何を自動化し、なぜ小さく頻繁に変更する助けになるのですか？",
+      "question_type": "mental-model"
     }
   ]
 }
