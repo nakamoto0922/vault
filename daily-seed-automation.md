@@ -47,11 +47,15 @@ Asia/Tokyo の当日分として、この vault 用の daily seed ノートを 3
 
 ## Git フロー
 
+worktree 実行を前提に、`main` へ切り替えないでください。別 worktree で `main` が checkout 済みの場合、`git switch main` や `git checkout main` は失敗することがあります。
+
 seed 用ブランチを作る、または更新する前に、必ず次を行うこと:
 
-1. `main` に切り替える。
-2. `main` を fast-forward only で最新まで pull する。
-3. そのあとで `seed-YYYYMMDD` ブランチを作る、または再利用する。
+1. `git fetch origin main` を実行して `origin/main` を最新化する。
+2. `seed-YYYYMMDD` ブランチが local にある場合は、そのブランチへ切り替えて使う。
+3. local にないが `origin/seed-YYYYMMDD` がある場合は、`origin/seed-YYYYMMDD` から local ブランチを作って使う。
+4. local にも remote にもない場合は、最新の `origin/main` から `seed-YYYYMMDD` ブランチを作る。
+5. 既存ブランチを更新する場合は、必要に応じて `origin/main` を取り込む。ただし未コミット変更や生成済みファイルを失わないこと。
 
 その後の流れ:
 
@@ -72,11 +76,12 @@ seed 用ブランチを作る、または更新する前に、必ず次を行う
 
 `daily-seed-automation.md` にすぐ反映すべき具体的な改善がある場合:
 
-1. 最新の `main` を基準に別ブランチを作る。
+1. `git fetch origin main` を実行する。
+2. 最新の `origin/main` を基準に別ブランチを作る。
    - `improve-daily-seed-automation-YYYYMMDD`
-2. `daily-seed-automation.md` だけを更新する。
-3. そのファイルだけを commit する。
-4. 次のタイトルで別 PR を作る。
+3. `daily-seed-automation.md` だけを更新する。
+4. そのファイルだけを commit する。
+5. 次のタイトルで別 PR を作る。
    - `Improve daily seed automation YYYY-MM-DD`
 
 改善が具体的で、今すぐ直す価値がある場合だけ実行してください。
@@ -87,10 +92,11 @@ seed 用ブランチを作る、または更新する前に、必ず次を行う
 
 1. `improvements/daily-seed-YYYYMMDD.md` を作る。
 2. 観察したこと、問題点、改善案を具体的に書く。
-3. 最新の `main` を基準に別ブランチを作る。
+3. `git fetch origin main` を実行する。
+4. 最新の `origin/main` を基準に別ブランチを作る。
    - `propose-daily-seed-improvements-YYYYMMDD`
-4. 改善メモだけを commit する。
-5. 次のタイトルで別 PR を作る。
+5. 改善メモだけを commit する。
+6. 次のタイトルで別 PR を作る。
    - `Propose daily seed improvements YYYY-MM-DD`
 
 意味のある提案が 1 件以上ある場合だけ、この PR を作ってください。
