@@ -71,6 +71,24 @@
       "category": "DevOps",
       "question": "CI/CDは何を自動化し、なぜ小さく頻繁に変更する助けになるのですか？",
       "question_type": "mental-model"
+    },
+    {
+      "date": "2026-04-25",
+      "category": "AI",
+      "question": "生成AIは「知っていることを思い出して答える」のですか？それとも毎回文章を作っているのですか？",
+      "question_type": "misconception"
+    },
+    {
+      "date": "2026-04-25",
+      "category": "TypeScript",
+      "question": "TypeScriptのunknownとanyは何が違い、最初はどちらを選ぶと安全なのですか？",
+      "question_type": "comparison"
+    },
+    {
+      "date": "2026-04-25",
+      "category": "Accessibility",
+      "question": "画像のalt属性はどういうときに必要で、何を書けばよいのですか？",
+      "question_type": "use-case"
     }
   ]
 }
