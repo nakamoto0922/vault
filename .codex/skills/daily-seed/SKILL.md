@@ -107,9 +107,11 @@ After generating the notes, append entries like this to `.codex/daily-seed-histo
 
 Before creating or updating the seed branch:
 
-1. Switch to `main`.
-2. Pull latest `main` with a fast-forward only strategy.
-3. Then create or reuse branch `seed-YYYYMMDD`.
+1. Run `git fetch origin main` first.
+2. If `seed-YYYYMMDD` already exists locally, switch to and reuse it.
+3. If it does not exist locally but `origin/seed-YYYYMMDD` exists, create the local branch from that remote branch and reuse it.
+4. If it exists in neither place, create `seed-YYYYMMDD` from the latest `origin/main`.
+5. Do not require switching to `main`; keep the flow safe for worktree-based execution.
 
 For the main seed PR:
 
@@ -126,8 +128,8 @@ After finishing the main seed PR, reflect on the run.
 
 If `daily-seed-automation.md` should be improved immediately:
 
-1. Switch to latest `main`.
-2. Create branch `improve-daily-seed-automation-YYYYMMDD`.
+1. Run `git fetch origin main`.
+2. Create branch `improve-daily-seed-automation-YYYYMMDD` from the latest `origin/main`.
 3. Update only `daily-seed-automation.md`.
 4. Commit only that file.
 5. Open a PR titled `Improve daily seed automation YYYY-MM-DD`.
@@ -136,8 +138,8 @@ If `daily-seed-automation.md` should be improved immediately:
 
 If there are other worthwhile improvements that should be recorded but not applied immediately:
 
-1. Switch to latest `main`.
-2. Create branch `propose-daily-seed-improvements-YYYYMMDD`.
+1. Run `git fetch origin main`.
+2. Create branch `propose-daily-seed-improvements-YYYYMMDD` from the latest `origin/main`.
 3. Create `improvements/daily-seed-YYYYMMDD.md`.
 4. Write concrete observations, problems, and proposals.
 5. Commit only that file.
